@@ -7,6 +7,7 @@
 :root {
     --primary-color: #1A0B2E;
     --txtclr: #FFFFFF;
+    --badgebg: #00FF88;
 }
 
 body {
@@ -68,12 +69,122 @@ body {
     margin: 24px auto;
     font-weight: 600;
 }
-#spclbtn{
+
+#spclbtn {
     display: none;
 }
+
 .subscribebtn:hover {
     cursor: pointer;
     opacity: 0.8;
-    transform: scale(1.25);
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+}
+
+/* page 1 */
+.page1 {
+    background-image: url("../assets/hero-bg.png");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: top;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    /* border: 2px solid green; */
+}
+
+.pg1cont {
+    width: 550px;
+    height: 100%;
+    margin: 0 auto;
+    /* border: 2px solid gold; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pg1icon {
+    width: 50%;
+    height: 50%;
+    border: 2px solid white;
+    border-radius: 50%;
+    fill: url("../assets/hero-bg.png");
+}
+
+.pg1icon .imgcont {
+    width: 116px;
+    height: 175px;
+    object-fit: contain;
+    margin: 20% auto;
+}
+
+.pg1icon .imgcont img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+.badge {
+    position: absolute;
+    top: 30vh;
+    left: 55vw;
+    background-color: var(--badgebg);
+    color: var(--primary-color);
+    width: 75px;
+    height: 38px;
+    text-align: center;
+    padding: 8px 16px;
+    border-radius: 1000px;
+}
+
+.pg1title {
+    margin-top: 40px;
+    font-size: 3.75rem;
+    font-weight: 800;
+    color: var(--txtclr);
+}
+
+.pg1subtitle {
+    color: var(--txtclr);
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.pg1btns {
+    margin-top: 14px;
+}
+
+.pg1btn1 {
+    background: linear-gradient(90deg, rgba(247, 233, 63, 1) 0%, rgba(251, 9, 180, 1) 51%, rgba(145, 0, 248, 1) 100%);
+    color: var(--txtclr);
+    width: 201px;
+    height: 44px;
+    border: none;
+    border-radius: 10000px;
+    margin-right: 8px;
+}
+
+.pg1btn2 {
+    width: 147px;
+    height: 44px;
+    background: transparent;
+    border-radius: 10000px;
+    border: 1px solid #00FF88;
+    color: #00FF88;
+}
+
+.pg1btn1:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.pg1btn2:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: scale(1.1);
     transition: all 0.3s ease-in-out;
 }
