@@ -7,11 +7,13 @@
 :root {
     --primary-color: #1A0B2E;
     --txtclr: #FFFFFF;
-    --badgebg: #00FF88;
+    --secondary-color: #00FF88;
 }
 
 body {
     font-family: "Inter", sans-serif;
+    background-color: var(--primary-color);
+    color: var(--txtclr);
 }
 
 /* header section */
@@ -107,30 +109,36 @@ body {
 .pg1icon {
     width: 50%;
     height: 50%;
-    border: 2px solid white;
-    border-radius: 50%;
-    fill: url("../assets/hero-bg.png");
+    /* border: 2px solid white; */
 }
 
-.pg1icon .imgcont {
-    width: 116px;
-    height: 175px;
-    object-fit: contain;
-    margin: 20% auto;
-}
-
-.pg1icon .imgcont img {
+.pg1imgcont {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    background-image: url("../assets/hero-circle.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
 
+.pg1imgcont img {
+    width: 25%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
 }
 
 .badge {
+    z-index: 3;
     position: absolute;
     top: 30vh;
     left: 55vw;
-    background-color: var(--badgebg);
+    background-color: var(--secondary-color);
     color: var(--primary-color);
     width: 75px;
     height: 38px;
@@ -171,8 +179,8 @@ body {
     height: 44px;
     background: transparent;
     border-radius: 10000px;
-    border: 1px solid #00FF88;
-    color: #00FF88;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
 }
 
 .pg1btn1:hover {
@@ -187,4 +195,59 @@ body {
     opacity: 0.8;
     transform: scale(1.1);
     transition: all 0.3s ease-in-out;
+}
+
+/* page2  */
+.pg2{
+    width: 100%;
+    height: 100vh;
+}
+.pg2box1{
+    width: 75%;
+    margin: 50px  auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pg2box1title{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+}
+.pg2box1contnt{
+    text-align: center;
+    font-weight: 400;
+}
+.pg2box1ftr{
+    margin-top: 16px;
+}
+.pg2 hr{
+    border: 1px solid var(--txtclr);
+    opacity: 10%;
+    width: 75%;
+    margin: 80px auto;
+}
+.pg2cardbox{
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.pg2card{
+    width: 240px;
+    height: 95px;
+}
+
+.pg2cardhdr{
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--secondary-color);
+    text-align: center;
+    height: 60px;
+}
+.pg2cardtitl{
+    text-align: center;
 }
